@@ -31,3 +31,4 @@ override.tf.json
 /ubuntu-2019-vmware/
 /windows-2019-vmware/
 /test/credentials.json
+/test/variables.pkr.hcl

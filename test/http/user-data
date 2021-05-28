@@ -1,0 +1,29 @@
+#cloud-config
+autoinstall:
+  version: 1
+  locale: en_US
+  keyboard:
+    layout: en
+    variant: us
+  network:
+    network:
+      version: 2
+      ethernets:
+        ens192:
+          dhcp4: true
+  storage:
+    layout:
+      name: lvm
+  identity:
+    hostname: ubuntu-packer
+    username: ubnt
+    password: $6$Iw39JkYS5iCN$LZvt/m8L3ZiC1KxS1upSkFzrFl3Selq4vXZznQekj.7ieYvpDhkslsL4wiYU974/BbeQ3xYqoXcxygrWwOWj00
+  ssh:
+    install-server: yes
+    allow-pw: true
+    authorized-keys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC/FT06j2WgRsK+9478gy9yEpo5ZCr5EUUjRnxrNCt43h7ghGq5ayEQZfiyRrkCGAmZ6DBc5QclR/1gio1dGlSYUN73KvfhOqTLiUmTqLRxJRzsCUqIJHyIvmr7diOdj9QHmKbdDrFU+Trx3iM+0FQoBLcV4yOueylDVu279RF84detmooCldhLb4EYf6a+SzFG1wfC+cdLw4zGpwmqYby6yAHA4i5++zLnV15aFcMJ3pirOMNwAMSJOdfoI/aboc6S0q0SzendDU29R/iselhKt3L9gE+8ZN5kfDeXHJ03Xr3QqV3dsja09Flait5ly2ySyEa3lNmwP+Q5bH5Ur4c1
+  user-data:
+    disable_root: false
+  late-commands:
+    - echo 'ubnt ALL=(ALL) NOPASSWD:ALL' > /target/etc/sudoers.d/ubuntu

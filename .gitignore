@@ -29,6 +29,7 @@ override.tf.json
 # example: *tfplan*
 /ubuntu-2019-vmware/credentials.json
 /ubuntu-2019-vmware/
-/windows-2019-vmware/
-/ubuntu-2004-02/credentials.json
-/ubuntu-2004-02/variables.pkr.hcl
+/windows/windows-2019-vmware/
+/linux/ubuntu-2004-02/credentials.json
+/linux/ubuntu-2004-02/variables.pkr.hcl
+/windows/windows-2019/variables.auto.pkrvars.hcl

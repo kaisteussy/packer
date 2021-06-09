@@ -40,6 +40,15 @@ variable "vsphere-server" {
   type    = string
 }
 
+variable "vsphere-folder" {
+  type    = string
+  default = "Templates"
+}
+
 variable "vsphere-user" {
   type    = string
 }
+
+ variable "winadmin-password" {
+   type = string
+ }
